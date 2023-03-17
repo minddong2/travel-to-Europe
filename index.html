@@ -13,64 +13,97 @@
     </script>
     <title>유럽여행</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>소개</h1>
-    <ol>
-        <li><a href="index.html" target="_blank">소개</a></li>
-        <li><a href="1.html" target="_blank">이탈리아</a></li>
-        <li><a href="2.html" target="_blank">스위스</a></li>
-        <li><a href="3.html" target="_blank">프랑스</a></li>
-        <li><a href="4.html" target="_blank">스페인</a></li>
-        <li><a href="5.html" target="_blank">오스트리아</a></li>
-        <li><a href="6.html" target="_blank">체코</a></li>
-        <li><a href="7.html" target="_blank">영국</a></li>
-    </ol>
-    <h2>이 페이지는?</h2>
-    <p><u>유럽여행</u> 계획을 짜고 스케줄을 관리할 수 있는 페이지입니다.</p>
-    <p style="margin-top:40px;">방문할 유럽여행 국가는 <strong>이탈리아 > 스위스 > 프랑스 > 스페인 > 오스트리아 > 체코 > 영국</strong> 입니다.</p>
-    보충 설명으로는 <a href="https://right-garlic-102.notion.site/f1ea9a7e85eb4437b2f9f30d794ef892" target="_blank"
-        title="유럽여행 메모장">노션</a>을 참고해주세요.<br>
-    <img src="world_map.jpg" width="50%">
+
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+
+    if(this.value === 'night'){
+
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+    
+    } else {
+
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+    }
+
+    ">
+    <div id="grid">
+        <div>
+            <ol>
+                <li><a href="index.html">소개</a></li>
+                <li><a href="1.html">이탈리아</a></li>
+                <li><a href="2.html">스위스</a></li>
+                <li><a href="3.html">프랑스</a></li>
+                <li><a href="4.html">스페인</a></li>
+                <li><a href="5.html">오스트리아</a></li>
+                <li><a href="6.html">체코</a></li>
+                <li><a href="7.html">영국</a></li>
+            </ol>
+
+        </div>
+
+        <div id="article">
+            <h2>이 페이지는?</h2>
+            <p>유럽여행 계획을 짜고 스케줄을 관리할 수 있는 페이지입니다.</p>
+            <p>방문할 유럽여행 국가는 <strong>이탈리아 > 스위스 > 프랑스 > 스페인 > 오스트리아 > 체코 > 영국</strong> 입니다.</p>
+            보충 설명으로는 <a href="https://right-garlic-102.notion.site/f1ea9a7e85eb4437b2f9f30d794ef892" target="_blank"
+                title="유럽여행 메모장">노션</a>을 참고해주세요.<br>
+            <img src="world_map.jpg" width="50%">
+
+        </div>
+
+
+    </div>
+
 
     <!--댓글 기능-->
-    <p>
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://travel-to-europe.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-    </p>
+    <div>
+        <p>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://travel-to-europe.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
+        </p>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/64117c7331ebfa0fe7f2af1c/1gri4s979';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/64117c7331ebfa0fe7f2af1c/1gri4s979';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+    </div>
 </body>
 
 </html>
