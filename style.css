@@ -2,10 +2,6 @@ body {
     margin: 0;
 }
 
-a {
-    color: black;
-}
-
 h1 {
     font-size: 45px;
     text-align: center;
@@ -16,7 +12,7 @@ h1 {
 
 #grid ol {
     border-right: 1px solid gray;
-    width: 100px;
+    width: 140px;
     margin: 0;
     padding: 20px;
     padding-left: 33px;
