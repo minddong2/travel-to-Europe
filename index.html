@@ -19,53 +19,14 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
-    <script>
-
-        function LinksSetColor(color) {
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while (i < alist.length) {
-                alist[i].style.color = color;
-                i += 1;
-            }
-        }
-
-        function BodySetColor(color){
-            document.querySelector('body').style.color = color;
-        }
-
-        function BodySetBackgroundColor(color){
-            document.querySelector('body').style.backgroundColor = color;
-        }
-
-
-        function nightDayHandler(self) {
-            var target = document.querySelector('body');
-
-            if (self.value === 'night') {
-
-                Body.setBackgroundColor('black');
-                Body.setColor('white');
-                Links.setColor('pink');
-                self.value = 'day';
-
-            } else {
-
-                Body.setBackgroundColor('white');
-                Body.setColor('black');
-                Links.setColor('blue');
-                self.value = 'night';
-            }
-        }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="color.js"></script>
 </head>
 
 <body>
     <h1>소개</h1>
 
-    <input type="button" class="btn btn-outline-dark" value="night" onclick="
-    nightDayHandler(this);
-    ">
+    <input type="button" class="btn btn-outline-dark" value="night" onclick="nightDayHandler(this);">
     <div id="grid">
         <div>
             <ol>
@@ -78,10 +39,9 @@
                 <li><a href="6.html">체코</a></li>
                 <li><a href="7.html">영국</a></li>
             </ol>
-
         </div>
 
-        <div id="article">
+        <div id="article" style="padding-left: 40px;">
             <h2>이 페이지는?</h2>
             <p>유럽여행 계획을 짜고 스케줄을 관리할 수 있는 페이지입니다.</p>
             <p>방문할 유럽여행 국가는 <strong>이탈리아 > 스위스 > 프랑스 > 스페인 > 오스트리아 > 체코 > 영국</strong> 입니다.</p>
